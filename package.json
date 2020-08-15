@@ -1,0 +1,12 @@
+{
+  "name": "test_rails_react",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "dijinio <dijinio@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "cd client && yarn install && yarn build && cd ..",
+    "deploy": "cp -a client/build/. public/",
+    "postinstall": "yarn build && yarn deploy && echo 'Client built!'"
+  }
+}
