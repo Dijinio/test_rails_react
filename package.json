@@ -5,8 +5,8 @@
   "author": "dijinio <dijinio@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "cd client && yarn install && yarn build && cd ..",
-    "deploy": "cp -a client/build/. public/",
-    "postinstall": "yarn build && yarn deploy && echo 'Client built!'"
+    "client-install": "yarn --prefix client",
+
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=true YARN_PRODUCTION=true"
   }
 }
